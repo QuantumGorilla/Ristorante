@@ -95,58 +95,76 @@
 
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Reserve table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
-                        &times;
-                    </button>
+                    <h4 class="modal-title">Reserve </h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
                 </div>
                 <div class="modal-body">
                     <form>
-                        <div class="form-row">
-                            <div class="form-group row">
-                                <div class="col-3"><label>Number of guests</label></div>
-                                <div class="col-9">
-                                    <input type="radio" name="guests" id="radioG1"> <label for="radioG1">1</label>
-                                    <input type="radio" name="guests" id="radioG2"> <label for="radioG2">2</label>
-                                    <input type="radio" name="guests" id="radioG3"> <label for="radioG3">3</label>
-                                    <input type="radio" name="guests" id="radioG4"> <label for="radioG4">4</label>
-                                    <input type="radio" name="guests" id="radioG5"> <label for="radioG5">5</label>
-                                    <input type="radio" name="guests" id="radioG6"> <label for="radioG6">6</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row row">
-                            <div class="form-group row">
-                                <div class="col-3"><label>Section</label></div>
-                                <div class="col-9">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-success active">
-                                        <input type="radio" name="options" id="option1" autocomplete="off" checked>Non-smoking</label>
-                                        <label class="btn btn-danger active">
-                                        <input type="radio" name="options" id="option1" autocomplete="off" checked>Smoking</label>
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-2">Number of guests</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="radioRT" id="radioRT1">
+                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="radioRT" id="radioRT2">
+                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="radioRT" id="radioRT3">
+                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="radioRT" id="radioRT4">
+                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="radioRT" id="radioRT5">
+                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="radioRT" id="radioRT6">
+                                        <label class="form-check-label" for="inlineRadio6">6</label>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-row row">
-                            <div class="form-group row">
-                                <div class="col-2"><label>Date and time</label></div>
-                                <div class="col-2 col-5"><input type="text" class="form-control" id="dateReserve" name="date" placeholder="Date"></div>
-                                <div class="col-2 col-5"><input type="text" class="form-control" id="timeReserve" name="time" placeholder="Time"></div>
+                        </fieldset>
+                        <div class="form-group row">
+                            <div class="col-sm-2">Section</div>
+                            <div class="col-sm-10">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                  <input type="radio" name="smoke" id="nonsmoke" autocomplete="off" checked> Non Smoking
+                                </label>
+                                    <label class="btn btn-danger">
+                                  <input type="radio" name="smoke" id="smoke" autocomplete="off" checked> Smoking
+                                </label>
+                                </div>
                             </div>
                         </div>
-                        <div class="modal-footer col-4 offset-0">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto nav-link" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1 nav-link">Reserve</button>
+                        <div class="form-group row">
+                            <div class="col-sm-2">Date and Time</div>
+                            <div class="col-sm-10">
+                                <div class="form-row">
+                                    <div class="col-12 col-sm-5"><input type="text" class="form-control" placeholder="Date"></div>
+                                    <div class="col-12 col-sm-5"><input type="text" class="form-control" placeholder="Time"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer col-sm-5">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Reserve</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="container">
         <div class="row row-content">
@@ -164,7 +182,8 @@
                             <img class="d-block img-fluid" src="img/buffet.png" alt="buffet">
                             <div class="carousel-caption d-none d-md-block">
                                 <h2>Weekend Grand Buffet<span class="badge badge-danger">NEW</span></h2>
-                                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
+                                </p>
                             </div>
                         </div>
                         <div class="carousel-item">
