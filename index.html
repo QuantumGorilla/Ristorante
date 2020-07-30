@@ -86,11 +86,67 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom" href="#reserveT">Reserve Table</a>
+                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                    <!--data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom" -->
                 </div>
             </div>
         </div>
     </header>
+
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve table</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group row">
+                                <div class="col-3"><label>Number of guests</label></div>
+                                <div class="col-9">
+                                    <input type="radio" name="guests" id="radioG1"> <label for="radioG1">1</label>
+                                    <input type="radio" name="guests" id="radioG2"> <label for="radioG2">2</label>
+                                    <input type="radio" name="guests" id="radioG3"> <label for="radioG3">3</label>
+                                    <input type="radio" name="guests" id="radioG4"> <label for="radioG4">4</label>
+                                    <input type="radio" name="guests" id="radioG5"> <label for="radioG5">5</label>
+                                    <input type="radio" name="guests" id="radioG6"> <label for="radioG6">6</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row row">
+                            <div class="form-group row">
+                                <div class="col-3"><label>Section</label></div>
+                                <div class="col-9">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-success active">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked>Non-smoking</label>
+                                        <label class="btn btn-danger active">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked>Smoking</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row row">
+                            <div class="form-group row">
+                                <div class="col-2"><label>Date and time</label></div>
+                                <div class="col-2 col-5"><input type="text" class="form-control" id="dateReserve" name="date" placeholder="Date"></div>
+                                <div class="col-2 col-5"><input type="text" class="form-control" id="timeReserve" name="time" placeholder="Time"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer col-4 offset-0">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto nav-link" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1 nav-link">Reserve</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="container">
         <div class="row row-content">
@@ -257,11 +313,11 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!--<script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>-->
-    <script>
+    <!--<script> esto es por si quiero usar un tooltip
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
         });
-    </script>
+    </script>-->
 </body>
 
 </html>
