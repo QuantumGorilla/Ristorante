@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                     src: [
                         'css/*.css',
                         '*.hmtl',
-                        'JS/*.js'
+                        'js/*.js'
                     ]
                 },
                 option: {
